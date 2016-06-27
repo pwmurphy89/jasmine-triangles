@@ -1,0 +1,25 @@
+<script>
+function findTypeOfTriangle(side1,side2,side3){
+	invalidTriangle(side1,side2,side3);
+	Equilateral(side1,side2,side3);
+	Isosceles(side1,side2,side3);
+}
+function invalidTriangle(side1,side2,side3){
+	if((side1 + side2 <= side3) || (side1 + side3 <= side2) || (side2 + side3 <= side1)){
+		return "Invalid";
+	}
+}
+function Equilateral(side1,side2,side3){
+	if((side1 == side2) && (side1 == side3) && (side2 == side3)){
+		return "Equilateral";
+	}
+}
+function Isosceles(side1,side2,side3){
+	if((side1 == side2) || (side1 == side3) || (side2 == side3)){
+		return "Isosceles";
+	}else{
+		return "Scalene";
+	}
+}
+
+</script>
